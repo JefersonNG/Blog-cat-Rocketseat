@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-thema: #065E7C;
+    --color-text: #202024;
+    --font-fam: "Mulish", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+body,
+main,
+input,
+button,
+span {
+    font-family: var(--font-fam);
+    color: var(--color-text);
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    justify-items: center;
+    height: 100vh;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    column-gap: 2.5rem;
+}
+
+header img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header input {
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.20);
+
+}
+
+header input::placeholder {
+    color: white;
+    font-family: var(--font-fam);
+    font-size: 1.6rem;
+    line-height: 100%
+}
+
+header,
+footer {
+    background: var(--bg-thema);
+}
+
+header label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+main {
+    display: grid;
+    max-width: 450px;
+}
+
+.container {
+    padding: 1.6rem 3.2rem;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.container h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 160%;
+    
+}
+
+.container > div {
+    margin: 3.2rem 0;
+}
+
+.wrapper>img {
+    width: 100%;
+
+    animation: move .6s;
+}
+
+.wrapper>img,
+aside img {
+    aspect-ratio: 16/9;
+
+    object-fit: contain;
+    border-radius: .5rem;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.3rem;
+    padding: 1.6rem 3.2rem;
+}
+
+figure {
+    display: flex;
+    gap: 1.6rem;
+}
+
+footer {
+    padding: 1.6rem;
+}
+
+footer p {
+    color: #FFF;
+    text-align: center;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translateY(-200px);
+    }
+}
+
+@media(min-width: 768px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+        column-gap: 3.4rem;
+        max-width: 1200px;
+        align-items: start;
+        padding: 4rem 4rem;
+    }
+
+    .container > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    aside {
+        row-gap: 3.2rem;
+       
+    }
+
+    .wrapper, aside {
+        padding: 0;
+    }
+    
+}
